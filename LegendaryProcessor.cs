@@ -12,11 +12,14 @@ namespace PracticalWork2
     {
         public List<LegendaryArtifact> LoadData(string filePath)
         {
+            List<LegendaryArtifact> data = new List<LegendaryArtifact>();
             try
             {
                 using (StreamReader sr = new StreamReader(filePath))
                 {
                     Console.WriteLine(sr.ReadToEnd());
+                    
+                    
                 }
             }
             catch (Exception e)
