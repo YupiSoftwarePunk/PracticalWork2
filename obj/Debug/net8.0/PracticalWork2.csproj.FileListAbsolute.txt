@@ -3,3 +3,4 @@ C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\PracticalWo
 C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\PracticalWork2.AssemblyInfoInputs.cache
 C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\PracticalWork2.AssemblyInfo.cs
 C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\PracticalWork2.csproj.CoreCompileInputs.cache
+C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\PracticalWork2.sourcelink.json

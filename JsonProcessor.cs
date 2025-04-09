@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 namespace PracticalWork2
 {
     [Serializable]
+
     public class JsonProcessor : IDataProcessor<ModernArtifact>
     {
         public List<ModernArtifact> LoadData(string filePath)  // десерилизация из json
@@ -30,9 +31,10 @@ namespace PracticalWork2
         {
             try
             {
-                string json = JsonConvert.SerializeObject
-                (this, Newtonsoft.Json.Formatting.Indented);
-                File.WriteAllText(filePath, json);
+                foreach (var i in data)
+                {
+                    i.Serialize(filePath);
+                }
             }
             catch (Exception e)
             {

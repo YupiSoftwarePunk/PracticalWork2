@@ -11,12 +11,11 @@ namespace PracticalWork2
         public string CurseDescription { get; set; }
         public bool IsCursed { get; set; }
 
-        string path = "Legendary_artifact.txt";
-        public override void Serialize()
+        public override void Serialize(string path)
         {
-            using (StreamWriter sw = new StreamWriter(path, true))  // true - Означает что текст добавляется в конец уже написанного текста
+            using (StreamWriter sw = new StreamWriter(path, true))  
             {
-                sw.WriteLine();
+                sw.WriteLine($"Name: {Name}, Id: {Id}, PowerLevel: {PowerLevel}, CurseDescription: {CurseDescription}, IsCursed: {IsCursed}");
             }
         }
 
@@ -25,7 +24,6 @@ namespace PracticalWork2
         {
             CurseDescription = curseDescription;
             IsCursed = isCursed;
-            this.path = path;
         }
     }
 }

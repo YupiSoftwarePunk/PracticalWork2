@@ -15,7 +15,7 @@ namespace PracticalWork2
         {
             Common, Rare, Epic, Legendary
         }
-        public abstract void Serialize();
+        public abstract void Serialize(string path);
 
 
         public Artifact(int id, string name, int powerLevel)

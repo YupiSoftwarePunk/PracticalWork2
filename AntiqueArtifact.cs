@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace PracticalWork2
 {
@@ -11,11 +12,12 @@ namespace PracticalWork2
         public int Age { get; set; }
         public string OriginRealm { get; set; }
 
-        public override void Serialize()
+        public override void Serialize(string path)
         {
-            using (FileStream fs = new FileStream("antique_artifact.xml", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
-                StreamWriter sw = new StreamWriter(fs);
+                XmlSerializer serializer = new XmlSerializer(typeof(AntiqueArtifact));
+                serializer.Serialize(fs, this);
             }
         }
 

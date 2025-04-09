@@ -10,6 +10,7 @@ using System.Xml.Serialization;
 namespace PracticalWork2
 {
     [Serializable]
+
     public class XmlProcessor : IDataProcessor<AntiqueArtifact>  
     {
         public List<AntiqueArtifact> LoadData(string filePath)    // десерилизация из xml
@@ -34,19 +35,28 @@ namespace PracticalWork2
         {
             try
             {
-                XmlDocument doc = new XmlDocument();
-                doc.LoadXml(filePath);
+                //XmlDocument doc = new XmlDocument();
+                //doc.LoadXml(filePath);
 
-                foreach (AntiqueArtifact artifact in data)
+                //foreach (AntiqueArtifact artifact in data)
+                //{
+                //    artifact.Id = Convert.ToInt32(artifact.Id);
+                //    artifact.Name = Convert.ToString(artifact.Name);
+                //    artifact.PowerLevel = Convert.ToInt32(artifact.PowerLevel);
+                //    artifact.Age = Convert.ToInt32(artifact.Age);
+                //    artifact.OriginRealm = Convert.ToString(artifact.OriginRealm);
+                //}
+
+                //doc.Save(filePath);
+
+                using (FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate))
                 {
-                    artifact.Id = Convert.ToInt32(artifact.Id);
-                    artifact.Name = Convert.ToString(artifact.Name);
-                    artifact.PowerLevel = Convert.ToInt32(artifact.PowerLevel);
-                    artifact.Age = Convert.ToInt32(artifact.Age);
-                    artifact.OriginRealm = Convert.ToString(artifact.OriginRealm);
+                    foreach (AntiqueArtifact artifact in data)
+                    {
+                        artifact.Serialize(filePath);
+                    }
                 }
 
-                doc.Save(filePath);
             }
             catch (Exception ex)
             {
