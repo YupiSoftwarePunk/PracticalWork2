@@ -48,10 +48,10 @@ namespace PracticalWork2
 
             foreach (var group in rarityGroups)
             {
-                reportContent.AppendLine($"Редкость: {group.Rarity}\nКоличество: {group.Count}\nСредняя сила: {group.AvgPower}\nМаксимальная сила: {group.MaxPower}");
+                reportContent.AppendLine($"Редкость: {group.Rarity}\nКоличество: {group.Count}\nСредняя сила: {group.AvgPower}\nМаксимальная сила: {group.MaxPower}\n");
             }
 
-            File.WriteAllText("artifact_report.txt", reportContent.ToString());
+            File.WriteAllText("report.txt", reportContent.ToString());
         }
 
 
