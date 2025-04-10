@@ -32,7 +32,26 @@ namespace PracticalWork2
 
         public void GenerateReport()
         {
+            var reportContent = new StringBuilder();
+            reportContent.AppendLine("Отчет по артефактам");
 
+            var rarityGroups = Artifacts
+                .GroupBy(a => a.rarity)
+                .Select(g => new 
+                {
+                    Rarity = g.Key,
+                    Count = g.Count(),
+                    AvgPower = g.Average(a => a.PowerLevel),
+                    MaxPower = g.Max(a => a.PowerLevel)
+                })
+                .OrderBy(g => g.Rarity);  
+
+            foreach (var group in rarityGroups)
+            {
+                reportContent.AppendLine($"Редкость: {group.Rarity}\nКоличество: {group.Count}\nСредняя сила: {group.AvgPower}\nМаксимальная сила: {group.MaxPower}");
+            }
+
+            File.WriteAllText("artifact_report.txt", reportContent.ToString());
         }
 
 
