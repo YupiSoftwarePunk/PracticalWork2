@@ -13,17 +13,11 @@ namespace PracticalWork2
 
         public override void Serialize(string path)
         {
-            using (StreamWriter sw = new StreamWriter(path, true))  
+            using (StreamWriter sw = new StreamWriter(path, true))
             {
                 sw.WriteLine($"Name: {Name}, Id: {Id}, PowerLevel: {PowerLevel}, CurseDescription: {CurseDescription}, IsCursed: {IsCursed}");
             }
         }
 
-        public LegendaryArtifact(int id, string name, int powerLevel, string curseDescription, bool isCursed, string path)
-            : base(id, name, powerLevel)
-        {
-            CurseDescription = curseDescription;
-            IsCursed = isCursed;
-        }
     }
 }

@@ -17,13 +17,5 @@ namespace PracticalWork2
             string json = JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(path, json);
         }
-
-
-        public ModernArtifact(int id, string name, int powerLevel, double techLevel, string manufacturer)
-            : base(id, name, powerLevel)
-        {
-            TechLevel = techLevel;
-            Manufacturer = manufacturer;
-        }
     }
 }

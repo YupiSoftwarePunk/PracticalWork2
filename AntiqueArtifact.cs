@@ -20,13 +20,5 @@ namespace PracticalWork2
                 serializer.Serialize(fs, this);
             }
         }
-
-
-        public AntiqueArtifact(int id, string name, int powerLevel, int age, string originRealm)
-            : base(id, name, powerLevel)
-        {
-            Age = age;
-            OriginRealm = originRealm;
-        }
     }
 }

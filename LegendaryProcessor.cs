@@ -3,24 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static PracticalWork2.Artifact;
 
 namespace PracticalWork2
 {
-    [Serializable]
-
     public class LegendaryProcessor : IDataProcessor<LegendaryArtifact>
     {
         public List<LegendaryArtifact> LoadData(string filePath)
         {
-            List<LegendaryArtifact> data = new List<LegendaryArtifact>();
+
             try
             {
-                using (StreamReader sr = new StreamReader(filePath))
+                List<LegendaryArtifact> data = new List<LegendaryArtifact>();
+                string[] lines = File.ReadAllLines(filePath);
+
+                foreach (string line in lines)
                 {
-                    Console.WriteLine(sr.ReadToEnd());
-                    
-                    
+                    var parts = line.Split('|');
+                    data.Add(new LegendaryArtifact
+                    {
+                        Id = int.Parse(parts[0]),
+                        Name = parts[1],
+                        PowerLevel = int.Parse(parts[2]),
+                        rarity = Enum.Parse<Rarity>(parts[3]),
+                        CurseDescription = parts[4],
+                        IsCursed = bool.Parse(parts[5])
+                    }
+                    );
                 }
+
+                return data;
             }
             catch (Exception e)
             {

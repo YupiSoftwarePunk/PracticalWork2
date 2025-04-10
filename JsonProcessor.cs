@@ -8,7 +8,6 @@ using Newtonsoft.Json;
 
 namespace PracticalWork2
 {
-    [Serializable]
 
     public class JsonProcessor : IDataProcessor<ModernArtifact>
     {
