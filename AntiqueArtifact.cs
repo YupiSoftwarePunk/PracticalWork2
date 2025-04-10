@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,25 @@ namespace PracticalWork2
                 XmlSerializer serializer = new XmlSerializer(typeof(AntiqueArtifact));
                 serializer.Serialize(fs, this);
             }
+        }
+
+
+        public override string ExportToXml()
+        {
+            XmlSerializer xmlConverter = new XmlSerializer(typeof(AntiqueArtifact));
+            StringBuilder xmlBuilder = new StringBuilder();
+
+            using (TextWriter textWriter = new StringWriter(xmlBuilder))
+            {
+                xmlConverter.Serialize(textWriter, this);
+            }
+
+            return xmlBuilder.ToString();
+        }
+
+        public override string ExportToJson()
+        {
+            return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
     }
 }

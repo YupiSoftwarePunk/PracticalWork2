@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PracticalWork2
 {
-    public abstract class Artifact
+    public abstract class Artifact : IExportable
     {
         public enum Rarity
         {
@@ -20,5 +20,9 @@ namespace PracticalWork2
         public Rarity rarity { get; set; }
 
         public abstract void Serialize(string path);
+
+        public abstract string ExportToJson();
+
+        public abstract string ExportToXml();
     }
 }
