@@ -4,3 +4,15 @@ C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\PracticalWo
 C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\PracticalWork2.AssemblyInfo.cs
 C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\PracticalWork2.csproj.CoreCompileInputs.cache
 C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\PracticalWork2.sourcelink.json
+C:\Users\Denis\Documents\projects C#\PracticalWork2\bin\Debug\net8.0\PracticalWork2.exe
+C:\Users\Denis\Documents\projects C#\PracticalWork2\bin\Debug\net8.0\PracticalWork2.deps.json
+C:\Users\Denis\Documents\projects C#\PracticalWork2\bin\Debug\net8.0\PracticalWork2.runtimeconfig.json
+C:\Users\Denis\Documents\projects C#\PracticalWork2\bin\Debug\net8.0\PracticalWork2.dll
+C:\Users\Denis\Documents\projects C#\PracticalWork2\bin\Debug\net8.0\PracticalWork2.pdb
+C:\Users\Denis\Documents\projects C#\PracticalWork2\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\Practica.E39D1D3A.Up2Date
+C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\PracticalWork2.dll
+C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\refint\PracticalWork2.dll
+C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\PracticalWork2.pdb
+C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\PracticalWork2.genruntimeconfig.cache
+C:\Users\Denis\Documents\projects C#\PracticalWork2\obj\Debug\net8.0\ref\PracticalWork2.dll

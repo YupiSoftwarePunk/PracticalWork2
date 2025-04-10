@@ -21,6 +21,7 @@ namespace PracticalWork2
 
         public abstract void Serialize(string path);
 
+
         public abstract string ExportToJson();
 
         public abstract string ExportToXml();

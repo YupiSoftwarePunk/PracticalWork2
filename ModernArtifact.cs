@@ -13,6 +13,7 @@ namespace PracticalWork2
         public double TechLevel { get; set; }
         public string Manufacturer { get; set; }
 
+
         public override void Serialize(string path)
         {
             string json = JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
@@ -33,9 +34,10 @@ namespace PracticalWork2
             return xmlBuilder.ToString();
         }
 
+
         public override string ExportToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
     }
 }

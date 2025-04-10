@@ -41,6 +41,7 @@ namespace PracticalWork2
             }
         }
 
+
         public void SaveData(List<LegendaryArtifact> data, string filePath)
         {
             try

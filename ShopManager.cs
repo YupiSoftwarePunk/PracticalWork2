@@ -10,6 +10,7 @@ namespace PracticalWork2
     {
         public List<Artifact> Artifacts { get; } = new List<Artifact>();
 
+
         public void LoadAllData()
         {
             LegendaryProcessor legendaryProcessor = new LegendaryProcessor();
@@ -34,6 +35,7 @@ namespace PracticalWork2
 
         }
 
+
         public List<LegendaryArtifact> FindCursedArtifacts()
         {
             try
@@ -50,6 +52,7 @@ namespace PracticalWork2
             }
         }
 
+
         public Dictionary<Artifact.Rarity, int> GroupByRarity()
         {
             try
@@ -64,6 +67,7 @@ namespace PracticalWork2
                 return null;
             }
         }
+
 
         public List<Artifact> TopByPower(int count)
         {

@@ -26,6 +26,7 @@ namespace PracticalWork2
             }
         }
 
+
         public void SaveData(List<ModernArtifact> data, string filePath)   // серилизация в json
         {
             try

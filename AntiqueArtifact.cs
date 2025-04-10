@@ -13,6 +13,7 @@ namespace PracticalWork2
         public int Age { get; set; }
         public string OriginRealm { get; set; }
 
+
         public override void Serialize(string path)
         {
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
@@ -36,9 +37,10 @@ namespace PracticalWork2
             return xmlBuilder.ToString();
         }
 
+
         public override string ExportToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
     }
 }

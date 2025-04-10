@@ -13,6 +13,7 @@ namespace PracticalWork2
         public string CurseDescription { get; set; }
         public bool IsCursed { get; set; }
 
+
         public override void Serialize(string path)
         {
             using (StreamWriter sw = new StreamWriter(path, true))
@@ -35,9 +36,10 @@ namespace PracticalWork2
             return xmlBuilder.ToString();
         }
 
+
         public override string ExportToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
     }
 }

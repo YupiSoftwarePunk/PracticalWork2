@@ -30,6 +30,7 @@ namespace PracticalWork2
             }
         }
 
+
         public void SaveData(List<AntiqueArtifact> data, string filePath)  // серилизация в xml
         {
             try
