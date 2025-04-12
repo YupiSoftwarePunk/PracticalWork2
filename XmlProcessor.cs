@@ -42,7 +42,6 @@ namespace PracticalWork2
                         artifact.Serialize(filePath);
                     }
                 }
-
             }
             catch (Exception ex)
             {

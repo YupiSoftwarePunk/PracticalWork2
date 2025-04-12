@@ -65,7 +65,6 @@ namespace PracticalWork2
             }
             catch (Exception ex)
             {
-
                 Console.WriteLine(ex.Message);
                 return null;
             }
@@ -81,7 +80,6 @@ namespace PracticalWork2
             }
             catch (Exception ex)
             {
-
                 Console.WriteLine(ex.Message);
                 return null;
             }
@@ -98,7 +96,6 @@ namespace PracticalWork2
             }
             catch (Exception ex)
             {
-
                 Console.WriteLine(ex.Message);
                 return null;
             }
