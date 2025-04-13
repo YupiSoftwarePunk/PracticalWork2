@@ -11,7 +11,8 @@
             // доделать меню со всеми вызовами методов
             while (true)
             {
-                Console.WriteLine("Меню магазина\n");
+                Console.WriteLine("\nМеню магазина\n");
+
                 Console.WriteLine("1. Загрузить данные");
                 Console.WriteLine("2. Создать отчет");
                 Console.WriteLine("3. Найти проклятые артефакты");
@@ -56,6 +57,25 @@
                     {
                         Console.WriteLine($"{item.Key}: {item.Value} шт.");
                     }
+                }
+                else if (choose == 5)
+                {
+                    Console.Write("Введите кол-во искомых артефактов по силе: ");
+                    int chooseCount = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine($"Топ {chooseCount} артефактов по силе");
+
+                    var range = shopManager.TopByPower(chooseCount);
+
+                    foreach (var item in range)
+                    {
+                        Console.WriteLine($"Название: {item.Name}, Сила: {item.PowerLevel}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\nОшибка!! \nНекорректный ввод!!");
+                    break;
                 }
             }
         }
