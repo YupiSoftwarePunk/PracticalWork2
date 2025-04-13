@@ -21,7 +21,7 @@ namespace PracticalWork2
             {
                 LoadProcessorData(new XmlProcessor(), "antique.xml");
                 LoadProcessorData(new JsonProcessor(), "modern.json");
-                LoadProcessorData(new LegendaryProcessor(), "legendary.txt");
+                LoadProcessorData(new LegendaryProcessor(), "legends.txt");
             }
             catch (Exception ex)
             {
