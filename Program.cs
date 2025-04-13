@@ -4,6 +4,8 @@
     {
         static void Main(string[] args)
         {
+            ShopManager shopManager = new ShopManager();
+
             Console.WriteLine("\t\t\tДобро пожаловать в магический магазин!\n\n");
 
             // доделать меню со всеми вызовами методов
@@ -18,6 +20,43 @@
                 Console.WriteLine("0. Выход");
 
 
+                Console.Write("Выберите действие: ");
+                int choose = Convert.ToInt32(Console.ReadLine());
+
+
+                if (choose == 0)
+                {
+                    break;
+                }
+                else if (choose == 1)
+                {
+                    shopManager.LoadAllData();
+                    Console.WriteLine($"Загружено {shopManager.Artifacts.Count} артефактов");
+                }
+                else if (choose == 2)
+                {
+                    shopManager.GenerateReport();
+                    Console.WriteLine("Отчет сохранен в файле - report.txt");
+                }
+                else if (choose == 3)
+                {
+                    var sorted = shopManager.FindCursedArtifacts();
+                    Console.WriteLine($"Найдено {sorted.Count} проклятых артефактов:");
+
+                    foreach (var item in sorted)
+                    {
+                        Console.WriteLine($"Название: {item.Name}, Сила: {item.PowerLevel}, Проклятие: {item.CurseDescription}");
+                    }
+                }
+                else if (choose == 4)
+                {
+                    var groupped = shopManager.GroupByRarity();
+
+                    foreach (var item in groupped)
+                    {
+                        Console.WriteLine($"{item.Key}: {item.Value} шт.");
+                    }
+                }
             }
         }
     }
